@@ -33,6 +33,31 @@ for uploaded_file in uploaded_files:
 
 # Camera input
 
+photo_1 = st.camera_input("Take photo 1")
+
+if photo_1:
+    st.image(photo_1)
+
+photo_2 = st.camera_input("Takee photo 1")
+
+if photo_2:
+    st.image(photo_2)
+
+photo_3 = st.camera_input("Takee photo 1")
+
+if photo_3:
+    st.image(photo_3)
+    
+photo_4 = st.camera_input("Takee photo 1")
+
+if photo_4:
+    st.image(photo_4)
+    
+photo_5 = st.camera_input("Takee photo 1")
+
+if photo_5:
+    st.image(photo_5)
+
 
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
