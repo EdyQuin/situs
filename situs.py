@@ -12,7 +12,7 @@ st.subheader('Real Tech Management')
    # byte_data = uploaded_file.getvalue()
     # st.write(bytes_data)
 
-uploaded_files = st.file_uploader("Choose a CSv file", accept_multiple_files=True)
+uploaded_files = st.file_uploader("Choose files to upload", accept_multiple_files=True)
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
     st.write("filename:", uploaded_file.name)
@@ -32,7 +32,6 @@ for uploaded_file in uploaded_files:
     st.write(dataframe)
 
 # Camera input
-
 
 
 # Connect to Deta Base with your Project Key
