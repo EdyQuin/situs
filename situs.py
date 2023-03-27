@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from io import String IO
+from io import StringIO
 
 st.image('./LOGO_091622.png')
 st.header('SITUS, By Edy Quin')
