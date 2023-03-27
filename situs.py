@@ -3,8 +3,8 @@ import pandas as pd
 from io import StringIO
 
 st.image('./LOGO_091622.png')
-st.header('SITUS, By Edy Quin')
-st.subheader('Real Tech Management')
+st.header('SITUS')
+st.subheader('Property Management')
 
 # uploaded_file = st.file_uploader("Choose a file")
 # if uploader_file is not None:
@@ -31,6 +31,7 @@ for uploaded_file in uploaded_files:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
 
+    
 # Camera input
 
 photo_1 = st.camera_input("Take photo 1")
@@ -38,27 +39,28 @@ photo_1 = st.camera_input("Take photo 1")
 if photo_1:
     st.image(photo_1)
 
-photo_2 = st.camera_input("Takee photo 1")
+photo_2 = st.camera_input("Take photo 2")
 
 if photo_2:
     st.image(photo_2)
 
-photo_3 = st.camera_input("Takee photo 1")
+photo_3 = st.camera_input("Take photo 3")
 
 if photo_3:
     st.image(photo_3)
     
-photo_4 = st.camera_input("Takee photo 1")
+photo_4 = st.camera_input("Take photo 4")
 
 if photo_4:
     st.image(photo_4)
     
-photo_5 = st.camera_input("Takee photo 1")
+photo_5 = st.camera_input("Take photo 5")
 
 if photo_5:
     st.image(photo_5)
 
 
+    
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
 db = deta.Base("SITUS")
