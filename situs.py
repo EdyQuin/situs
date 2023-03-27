@@ -35,7 +35,7 @@ if submitted:
 "---"
 # This reads all items from the database and displays them to your app.
 # db_content is a list of dictionaries. You can do everything you want with it.
-db_content = db.fetch(query=None, limit=None, last=None).items
+# db_content = db.fetch(query=None, limit=None, last=None).items
 
 # uploaded_file = st.file_uploader("Choose a file")
 # if uploader_file is not None:
@@ -61,7 +61,7 @@ for uploaded_file in uploaded_files:
     # Can be used wherever a "file like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
-
+    
     
 # Camera input
 
