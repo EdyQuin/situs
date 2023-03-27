@@ -16,7 +16,7 @@ uploaded_files = st.file_uploader("Choose files to upload", accept_multiple_file
 for uploaded_file in uploaded_files:
     bytes_data = uploaded_file.read()
     st.write("filename:", uploaded_file.name)
-    st.write(bytes_data)
+   # st.write(bytes_data)
 
 # To convert to a stringbased IO:
     strongio = StringIO(uploaded_file.getvalue().decode("utf-8"))
