@@ -6,12 +6,17 @@ st.image('./LOGO_091622.png')
 st.header('SITUS, By Edy Quin')
 st.subheader('Real Tech Management')
 
-uploaded_file = st.file_uploader("Choose a file")
-if uploader_file is not None:
+# uploaded_file = st.file_uploader("Choose a file")
+# if uploader_file is not None:
     # To read file as bytes:
-    byte_data = uploaded_file.getvalue()
-    st.write(bytes_data)
+   # byte_data = uploaded_file.getvalue()
+    # st.write(bytes_data)
     
+    uploaded_files = st.file_uploader("Choose a CSv file", accept_multiple_files=True)
+    for uploaded_file in uploaded_files:
+        bytes_data = uploaded_file.read()
+        st.write("filename:", uploaded_file.name)
+        st.write(bytes_data)
     # To convert to a stringbased IO:
     strongio = StringIO(uploaded_file.getvalue().decode("utf-8"))
     
@@ -24,12 +29,6 @@ if uploader_file is not None:
     # Can be used wherever a "file like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
-
-    uploaded_files = st.file_uploader("Choose a CSv file", accept_multiple_files=True)
-    for uploaded_file in uploaded_files:
-        bytes_data = uploaded_file.read()
-        st.write("filename:", uploaded_file.name)
-        st.write(bytes_data)
 
 # Camera input
 
