@@ -25,7 +25,11 @@ if uploader_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
 
-    uploaderd_files = st.file_uploader("Choose a CSv file", accept_multiple_files)
+    uploaded_files = st.file_uploader("Choose a CSv file", accept_multiple_files=True)
+    for uploaded_file in uploaded_files:
+        bytes_data = uploaded_file.read()
+        st.write("filename:", uploaded_file.name)
+        st.write(bytes_data)
 
 # Camera input
 
