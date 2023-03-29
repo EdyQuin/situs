@@ -6,6 +6,27 @@ from deta import Deta
 st.image('./LOGO_091622.png')
 st.header('SITUS')
 st.subheader('Property Management Solution')
+    
+# Camera input
+photo_1 = st.camera_input("Take photo 1")
+if photo_1:
+    st.image(photo_1)
+    
+photo_2 = st.camera_input("Take photo 2")
+if photo_2:
+    st.image(photo_2)
+        
+photo_3 = st.camera_input("Take photo 3")
+if photo_3:
+    st.image(photo_3)
+    
+photo_4 = st.camera_input("Take photo 4")
+if photo_4:
+    st.image(photo_4)
+    
+photo_5 = st.camera_input("Take photo 5")
+if photo_5:
+    st.image(photo_5)
 
 # Data to be written to Deta Base
 with st.form("form"):
@@ -42,28 +63,6 @@ for uploaded_file in uploaded_files:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
     
-    
-# Camera input
-photo_1 = st.camera_input("Take photo 1")
-if photo_1:
-    st.image(photo_1)
-    
-photo_2 = st.camera_input("Take photo 2")
-if photo_2:
-    st.image(photo_2)
-        
-photo_3 = st.camera_input("Take photo 3")
-if photo_3:
-    st.image(photo_3)
-    
-photo_4 = st.camera_input("Take photo 4")
-if photo_4:
-    st.image(photo_4)
-    
-photo_5 = st.camera_input("Take photo 5")
-if photo_5:
-    st.image(photo_5)
-
 submitted = st.form_submit_button("Submit your property reqport")
 clear_on_submit=True
     
