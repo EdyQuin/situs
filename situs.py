@@ -37,6 +37,9 @@ with st.form("form"):
     qone = st.text_input("What")
     qtwo = st.text_input("What ")
     qthree = st.text_input("Are ")
+    
+    submitted = st.form_submit_button("Submit your property reqport")
+    clear_on_submit=True
 
 # uploaded_file = st.file_uploader("Choose a file")
 # if uploader_file is not None:
@@ -63,8 +66,8 @@ for uploaded_file in uploaded_files:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
     
-submitted = st.form_submit_button("Submit your property reqport")
-clear_on_submit=True
+    submitted = st.form_submit_button("Submit your property reqport")
+    clear_on_submit=True
     
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
