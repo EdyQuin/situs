@@ -16,26 +16,6 @@ with st.form("form"):
     qone = st.text_input("What")
     qtwo = st.text_input("What ")
     qthree = st.text_input("Are ")
-    
-    submitted = st.form_submit_button("Submit your property reqport")
-    clear_on_submit=True
-    
-# Connect to Deta Base with your Project Key
-deta = Deta(st.secrets["deta_key"])
-db = deta.Base("Notary_Registration_App")
-
-# If the user clicked the submit button
-# write the data from the form to the database.
-# You can store any data you want here. Just modify that dictionary below (the entries between the {}).
-if submitted:
-    db.put({"name": name, "age": age, "email": email, "telephone": telephone, 
-            "q1": qone, "q2": qtwo, "q3": qthree})
-    if submitted:
-        st.write("Your answers have been successfully received. For any questions or concerns please contact the office @ equin@assetmana.com. Please close your browser when you are finished.")
-"---"
-# This reads all items from the database and displays them to your app.
-# db_content is a list of dictionaries. You can do everything you want with it.
-# db_content = db.fetch(query=None, limit=None, last=None).items
 
 # uploaded_file = st.file_uploader("Choose a file")
 # if uploader_file is not None:
@@ -64,23 +44,42 @@ for uploaded_file in uploaded_files:
     
     
 # Camera input
+photo_1 = st.camera_input("Take photo 1")
+if photo_1:
+    st.image(photo_1)
     
-    photo_1 = st.camera_input("Take photo 1")
-    if photo_1:
-        st.image(photo_1)
-    
-    photo_2 = st.camera_input("Take photo 2")
-    if photo_2:
-        st.image(photo_2)
+photo_2 = st.camera_input("Take photo 2")
+if photo_2:
+    st.image(photo_2)
         
-    photo_3 = st.camera_input("Take photo 3")
-    if photo_3:
-        st.image(photo_3)
+photo_3 = st.camera_input("Take photo 3")
+if photo_3:
+    st.image(photo_3)
     
-    photo_4 = st.camera_input("Take photo 4")
-    if photo_4:
-        st.image(photo_4)
+photo_4 = st.camera_input("Take photo 4")
+if photo_4:
+    st.image(photo_4)
     
-    photo_5 = st.camera_input("Take photo 5")
-    if photo_5:
-        st.image(photo_5)
+photo_5 = st.camera_input("Take photo 5")
+if photo_5:
+    st.image(photo_5)
+
+     submitted = st.form_submit_button("Submit your property reqport")
+    clear_on_submit=True
+    
+# Connect to Deta Base with your Project Key
+deta = Deta(st.secrets["deta_key"])
+db = deta.Base("Notary_Registration_App")
+
+# If the user clicked the submit button
+# write the data from the form to the database.
+# You can store any data you want here. Just modify that dictionary below (the entries between the {}).
+if submitted:
+    db.put({"name": name, "age": age, "email": email, "telephone": telephone, 
+            "q1": qone, "q2": qtwo, "q3": qthree})
+    if submitted:
+        st.write("Your answers have been successfully received. For any questions or concerns please contact the office @ equin@assetmana.com. Please close your browser when you are finished.")
+"---"
+# This reads all items from the database and displays them to your app.
+# db_content is a list of dictionaries. You can do everything you want with it.
+# db_content = db.fetch(query=None, limit=None, last=None).items
