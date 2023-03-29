@@ -8,10 +8,12 @@ st.header('SITUS')
 st.subheader('Property Management Solution')
     
 # Camera input
+st.write(['st', 'is <', 3]) # see *
 photo_1 = st.camera_input("Take photo 1")
 if photo_1:
     st.image(photo_1)
-    
+
+st.write(['st', 'is <', 3]) # see *
 photo_2 = st.camera_input("Take photo 2")
 if photo_2:
     st.image(photo_2)
