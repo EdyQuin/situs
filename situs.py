@@ -64,8 +64,8 @@ photo_5 = st.camera_input("Take photo 5")
 if photo_5:
     st.image(photo_5)
 
-     submitted = st.form_submit_button("Submit your property reqport")
-    clear_on_submit=True
+submitted = st.form_submit_button("Submit your property reqport")
+clear_on_submit=True
     
 # Connect to Deta Base with your Project Key
 deta = Deta(st.secrets["deta_key"])
