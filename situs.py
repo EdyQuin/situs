@@ -34,19 +34,6 @@ if photo_5:
     st.image(photo_5)
 st.text_input('Photo 5 Report')
 
-# Data to be written to Deta Base
-with st.form("form"):
-    name = st.text_input("property name")
-    address = st.number_input("property address")
-    manager = st.text_input("manager name")
-    floors = st.number_input("how many floors")
-    qone = st.text_input("What")
-    qtwo = st.text_input("What ")
-    qthree = st.text_input("Are ")
-    
-    submitted = st.form_submit_button("Submit your property reqport")
-    clear_on_submit=True
-
 # uploaded_file = st.file_uploader("Choose a file")
 # if uploader_file is not None:
     # To read file as bytes:
@@ -71,6 +58,19 @@ for uploaded_file in uploaded_files:
     # Can be used wherever a "file like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
+    
+    submitted = st.form_submit_button("Submit your property reqport")
+    clear_on_submit=True
+    
+# Data to be written to Deta Base
+with st.form("form"):
+    name = st.text_input("property name")
+    address = st.number_input("property address")
+    manager = st.text_input("manager name")
+    floors = st.number_input("how many floors")
+    qone = st.text_input("What")
+    qtwo = st.text_input("What ")
+    qthree = st.text_input("Are ")
     
     submitted = st.form_submit_button("Submit your property reqport")
     clear_on_submit=True
