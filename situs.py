@@ -9,6 +9,7 @@ st.subheader('Property Management Solution')
     
 # Camera input
 
+st.text_input('Report')
 photo_1 = st.camera_input("Take photo 1")
 if photo_1:
     st.image(photo_1)
