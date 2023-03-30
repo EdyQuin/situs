@@ -9,27 +9,31 @@ st.subheader('Property Management Solution')
     
 # Camera input
 
-st.text_input('Report')
 photo_1 = st.camera_input("Take photo 1")
 if photo_1:
     st.image(photo_1)
-
+st.text_input('Photo 1 Report')
 
 photo_2 = st.camera_input("Take photo 2")
 if photo_2:
     st.image(photo_2)
-        
+st.text_input('Photo 2 Report') 
+
 photo_3 = st.camera_input("Take photo 3")
 if photo_3:
     st.image(photo_3)
-    
-photo_4 = st.camera_input("Take photo 4")
+st.text_input('Photo 3 Report')   
+
+photo_4 = st.camera_input("Take photo 3")
+
 if photo_4:
     st.image(photo_4)
-    
+st.text_input('Photo 4 Report')
+
 photo_5 = st.camera_input("Take photo 5")
 if photo_5:
     st.image(photo_5)
+st.text_input('Photo 5 Report')
 
 # Data to be written to Deta Base
 with st.form("form"):
