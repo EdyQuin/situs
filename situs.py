@@ -24,8 +24,7 @@ if photo_3:
     st.image(photo_3)
 st.text_input('Photo 3 Report')   
 
-photo_4 = st.camera_input("Take photo 3")
-
+photo_4 = st.camera_input("Take photo 4")
 if photo_4:
     st.image(photo_4)
 st.text_input('Photo 4 Report')
