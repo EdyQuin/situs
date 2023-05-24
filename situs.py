@@ -5,7 +5,7 @@ from deta import Deta
 
 st.image('./LOGO_091622.png')
 st.header('SITUS')
-st.subheader('Property Management Solution')
+st.subheader('Property Management Surveillance Solution')
     
 # Camera input
 
@@ -69,8 +69,8 @@ with st.form("form"):
     manager = st.text_input("manager name")
     floors = st.number_input("how many floors")
     qone = st.text_input("What")
-    qtwo = st.text_input("What ")
-    qthree = st.text_input("Are ")
+    qtwo = st.text_input("Where")
+    qthree = st.text_input("When")
     
     submitted = st.form_submit_button("Submit your property report")
     clear_on_submit=True
