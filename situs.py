@@ -12,27 +12,27 @@ st.subheader('Property Management Solution')
 photo_1 = st.camera_input("Take photo 1")
 if photo_1:
     st.image(photo_1)
-st.text_input('Photo 1 Report')
+st.text_input('Photo 1 Narrative Report')
 
 photo_2 = st.camera_input("Take photo 2")
 if photo_2:
     st.image(photo_2)
-st.text_input('Photo 2 Report') 
+st.text_input('Photo 2 Narrative Report') 
 
 photo_3 = st.camera_input("Take photo 3")
 if photo_3:
     st.image(photo_3)
-st.text_input('Photo 3 Report')   
+st.text_input('Photo 3 Narrative Report')   
 
 photo_4 = st.camera_input("Take photo 4")
 if photo_4:
     st.image(photo_4)
-st.text_input('Photo 4 Report')
+st.text_input('Photo 4 Narrative Report')
 
 photo_5 = st.camera_input("Take photo 5")
 if photo_5:
     st.image(photo_5)
-st.text_input('Photo 5 Report')
+st.text_input('Photo 5 Narrative Report')
 
 # uploaded_file = st.file_uploader("Choose a file")
 # if uploader_file is not None:
@@ -65,14 +65,14 @@ for uploaded_file in uploaded_files:
 # Data to be written to Deta Base
 with st.form("form"):
     name = st.text_input("property name")
-    address = st.number_input("property address")
+    address = st.text_input("property address")
     manager = st.text_input("manager name")
     floors = st.number_input("how many floors")
     qone = st.text_input("What")
     qtwo = st.text_input("What ")
     qthree = st.text_input("Are ")
     
-    submitted = st.form_submit_button("Submit your property reqport")
+    submitted = st.form_submit_button("Submit your property report")
     clear_on_submit=True
     
 # Connect to Deta Base with your Project Key
@@ -83,7 +83,7 @@ db = deta.Base("Notary_Registration_App")
 # write the data from the form to the database.
 # You can store any data you want here. Just modify that dictionary below (the entries between the {}).
 if submitted:
-    db.put({"name": name, "age": age, "email": email, "telephone": telephone, 
+    db.put({"name": name, "aaddress": address, "manager": manager, "floors": floors, 
             "q1": qone, "q2": qtwo, "q3": qthree})
     if submitted:
         st.write("Your answers have been successfully received. For any questions or concerns please contact the office @ equin@assetmana.com. Please close your browser when you are finished.")
